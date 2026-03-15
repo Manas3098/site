@@ -1,3 +1,4 @@
+/* Общие стили */
 * {
     margin: 0;
     padding: 0;
@@ -18,9 +19,9 @@ body {
 }
 
 .section-title {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     color: #111827;
 }
 
@@ -31,13 +32,14 @@ body {
 .btn {
     display: inline-block;
     padding: 12px 30px;
-    border-radius: 8px;
+    border-radius: 50px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
     font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
 }
 
 .btn--primary {
@@ -48,19 +50,33 @@ body {
 .btn--primary:hover {
     background: #1D4ED8;
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
 }
 
-.btn--full {
-    width: 100%;
+/* Верхняя плашка */
+.top-bar {
+    background: #1D4ED8;
+    color: white;
+    padding: 8px 0;
+    font-size: 0.9rem;
+}
+
+.top-bar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar__phone i,
+.top-bar__hours i {
+    margin-right: 5px;
 }
 
 /* Шапка */
 .header {
     background: white;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
@@ -69,7 +85,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 80px;
 }
 
 .logo {
@@ -103,9 +119,9 @@ body {
     color: #1F2937;
 }
 
-/* Герой */
+/* Hero секция */
 .hero {
-    padding: 130px 0 80px;
+    padding: 60px 0 80px;
     background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
 }
 
@@ -127,24 +143,61 @@ body {
 .hero__subtitle {
     font-size: 1.2rem;
     color: #4B5563;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Блок защиты */
+.hero__protection {
+    margin: 20px 0 25px;
+    padding: 15px 20px;
+    background: rgba(37, 99, 235, 0.05);
+    border-radius: 50px;
+    border-left: 4px solid #2563EB;
+}
+
+.protection-title {
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 8px;
+}
+
+.protection-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.protection-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4B5563;
+}
+
+.protection-list i {
+    color: #2563EB;
+    font-size: 1.2rem;
 }
 
 .hero__image img {
     width: 100%;
+    max-width: 85%;          /* Уменьшена картинка */
+    margin: 0 auto;
+    display: block;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 /* Услуги */
 .services {
-    padding: 80px 0;
+    padding: 60px 0;
     background: #F9FAFB;
 }
 
 .services__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
 
@@ -153,94 +206,149 @@ body {
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 30px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.1);
 }
 
 .service-card__icon {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     color: #2563EB;
     margin-bottom: 1rem;
 }
 
 .service-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
-    color: #111827;
 }
 
 .service-card p {
     color: #6B7280;
-    font-size: 0.95rem;
 }
 
-/* Контакты */
+/* Контакты (новая версия) */
 .contact {
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
 .contact__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    max-width: 900px;
+    align-items: center;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-.contact__form {
+.contact__info {
     background: white;
-    padding: 2rem;
-    border-radius: 20px;
+    padding: 2.5rem;
+    border-radius: 30px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-.contact__input,
-.contact__textarea {
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 1rem;
-    border: 1px solid #E5E7EB;
-    border-radius: 8px;
-    font-family: inherit;
-    transition: border 0.3s;
+.info-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #1F2937;
 }
 
-.contact__input:focus,
-.contact__textarea:focus {
-    outline: none;
-    border-color: #2563EB;
+.info-text {
+    color: #6B7280;
+    margin-bottom: 2rem;
 }
 
-.contact__info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.5rem;
+.btn--whatsapp {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn--whatsapp i {
+    margin-right: 8px;
+}
+
+.btn--whatsapp:hover {
+    background: #20B859;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+}
+
+.contact__phone {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.contact__link {
+    color: #1F2937;
+    text-decoration: none;
+    border-bottom: 1px dashed #2563EB;
+}
+
+.contact__link:hover {
+    color: #2563EB;
 }
 
 .contact__item {
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #4B5563;
 }
 
 .contact__icon {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #2563EB;
     width: 25px;
+}
+
+.contact__social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.contact__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #F3F4F6;
+    border-radius: 50%;
+    color: #2563EB;
+    transition: all 0.3s;
+}
+
+.contact__social-link:hover {
+    background: #2563EB;
+    color: white;
+}
+
+.contact__image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 /* Футер */
 .footer {
     background: #111827;
     color: white;
-    padding: 25px 0;
+    padding: 30px 0;
 }
 
 .footer__container {
@@ -251,7 +359,6 @@ body {
 
 .footer__copy {
     color: #9CA3AF;
-    font-size: 0.95rem;
 }
 
 .footer__social {
@@ -269,8 +376,70 @@ body {
     color: #2563EB;
 }
 
+/* Плавающая кнопка WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s;
+    z-index: 999;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+/* Кнопка "Наверх" */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: #2563EB;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+    transition: all 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: #1D4ED8;
+    transform: translateY(-3px);
+}
+
 /* Адаптивность */
 @media (max-width: 768px) {
+    .header__container {
+        height: 70px;
+    }
+
     .nav__list {
         display: none;
         position: absolute;
@@ -299,27 +468,48 @@ body {
         gap: 2rem;
     }
 
-    .hero {
-        padding: 110px 0 60px;
+    .hero__image {
+        order: -1;
+        text-align: center;
     }
 
     .hero__title {
         font-size: 2.2rem;
     }
 
-    .hero__image {
-        order: -1;
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .top-bar__container {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .protection-list {
+        flex-direction: column;
+        gap: 10px;
     }
 
     .footer__container {
         flex-direction: column;
-        gap: 0.8rem;
+        gap: 1rem;
         text-align: center;
+    }
+
+    .contact__image {
+        display: none; /* скрываем картинку на мобильных */
     }
 }
 
 @media (max-width: 480px) {
     .hero__title {
         font-size: 1.8rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
     }
 }
