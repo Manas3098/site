@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ремонт телевизоров</title>
+    <title>TV Glass | Ремонт телевизоров</title>
     <!-- Google Fonts + Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,10 +12,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Верхняя плашка с телефоном -->
+    <div class="top-bar">
+        <div class="container top-bar__container">
+            <span class="top-bar__phone">
+                <i class="fas fa-phone-alt"></i> 
+                <a href="tel:+770255588535" style="color: white; text-decoration: none;">+7 (702) 555-85-35</a>
+            </span>
+            <span class="top-bar__hours">
+                <i class="far fa-clock"></i> Ежедневно с 8:00 до 22:00
+            </span>
+        </div>
+    </div>
+
     <!-- Шапка -->
     <header class="header">
         <div class="container header__container">
-            <a href="#" class="logo">TV Service</a>
+            <a href="#" class="logo">TV Glass</a>
             <nav class="nav">
                 <ul class="nav__list">
                     <li><a href="#home" class="nav__link">Главная</a></li>
@@ -35,6 +48,16 @@
             <div class="hero__content">
                 <h1 class="hero__title">Ремонт телевизоров любой сложности</h1>
                 <p class="hero__subtitle">Бесплатная диагностика, выезд на дом, гарантия до 1 года.</p>
+                
+                <!-- Блок защиты -->
+                <div class="hero__protection">
+                    <p class="protection-title">Ваш телевизор под надежной защитой!</p>
+                    <ul class="protection-list">
+                        <li><i class="fas fa-child"></i> Защита от детей</li>
+                        <li><i class="fas fa-water"></i> Защита от брызг воды</li>
+                    </ul>
+                </div>
+
                 <a href="#contact" class="btn btn--primary">Вызвать мастера</a>
             </div>
             <div class="hero__image">
@@ -72,22 +95,27 @@
         </div>
     </section>
 
-    <!-- Контакты -->
+    <!-- Контакты (без формы, только WhatsApp) -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title center">Свяжитесь с нами</h2>
             <div class="contact__wrapper">
-                <form class="contact__form">
-                    <input type="text" name="name" placeholder="Ваше имя" class="contact__input" required>
-                    <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" class="contact__input" required>
-                    <textarea name="message" placeholder="Опишите проблему" class="contact__textarea" rows="3"></textarea>
-                    <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
-                </form>
+                <!-- Блок с информацией и WhatsApp -->
                 <div class="contact__info">
-                    <div class="contact__item">
-                        <i class="fas fa-phone-alt contact__icon"></i>
-                        <span>+7 (702) 555 85 35</span>
-                    </div>
+                    <h3 class="info-title">Напишите нам в WhatsApp</h3>
+                    <p class="info-text">Мы отвечаем быстро, обычно в течение 5–10 минут.</p>
+                    
+                    <!-- Большая кнопка WhatsApp -->
+                    <a href="https://wa.me/7025558535" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">
+                        <i class="fab fa-whatsapp"></i> Написать в WhatsApp
+                    </a>
+                    
+                    <!-- Телефон -->
+                    <p class="contact__phone">
+                        <i class="fas fa-phone-alt"></i> 
+                        <a href="tel:+77025558535" class="contact__link">+7 (702) 555-85-35</a>
+                    </p>
+                    
                     <div class="contact__item">
                         <i class="fas fa-map-marker-alt contact__icon"></i>
                         <span>Астана</span>
@@ -96,6 +124,15 @@
                         <i class="fas fa-clock contact__icon"></i>
                         <span>Ежедневно 9:00–21:00</span>
                     </div>
+                    
+                    <!-- Дополнительные соцсети -->
+                    <div class="contact__social">
+                        <a href="https://wa.me/7025558535" class="contact__social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <!-- Картинка (можно заменить или убрать) -->
+                <div class="contact__image">
+                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Напишите нам" loading="lazy">
                 </div>
             </div>
         </div>
@@ -104,13 +141,22 @@
     <!-- Футер -->
     <footer class="footer">
         <div class="container footer__container">
-            <p class="footer__copy">&copy; 2026 TV Service</p>
+            <p class="footer__copy">&copy; 2026 TV Glass</p>
             <div class="footer__social">
                 <a href="#" class="footer__social-link"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" class="footer__social-link"><i class="fab fa-telegram-plane"></i></a>
             </div>
         </div>
     </footer>
+
+    <!-- Плавающая кнопка WhatsApp -->
+    <a href="https://wa.me/7025558535" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Написать в WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Кнопка "Наверх" -->
+    <button id="backToTop" class="back-to-top" aria-label="Наверх">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
