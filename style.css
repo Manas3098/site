@@ -158,7 +158,7 @@ body {
 .protection-title {
     font-weight: 700;
     color: #1F2937;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
 }
 
 .protection-list {
@@ -487,10 +487,20 @@ body {
         text-align: center;
     }
 
-    .protection-list {
-        flex-direction: column;
-        gap: 10px;
+    /* === НАЧАЛО ИЗМЕНЕНИЙ ДЛЯ БЛОКА ЗАЩИТЫ === */
+    .hero__protection {
+        padding: 10px 12px;        /* Уменьшены внутренние отступы */
     }
+
+    .protection-title {
+        font-size: 0.9rem;          /* Уменьшен размер шрифта */
+        white-space: nowrap;         /* Запрет переноса строки */
+    }
+
+    .protection-list li {
+        font-size: 0.9rem;           /* Чуть уменьшаем текст пунктов */
+    }
+    /* === КОНЕЦ ИЗМЕНЕНИЙ === */
 
     .footer__container {
         flex-direction: column;
@@ -511,5 +521,10 @@ body {
     .btn {
         width: 100%;
         text-align: center;
+    }
+
+    /* Дополнительная корректировка для очень узких экранов */
+    .protection-title {
+        font-size: 0.85rem;          /* Ещё меньше, если нужно */
     }
 }
