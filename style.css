@@ -493,7 +493,7 @@ body {
     }
 
     .protection-title {
-        font-size: 0.8rem;          /* Уменьшен размер шрифта */
+        font-size: 0.75rem;          /* Уменьшен размер шрифта */
         white-space: nowrap;         /* Запрет переноса строки */
     }
 
